@@ -1,0 +1,8 @@
+now upload the program,
+
+Now type “AT” and response must be “OK”
+Now Type “AT+CWMODE=3”,you will get ok
+Type ”AT+CWLAP”, you will  see no. of access point
+Type "AT+CWJAP="Name of your access point", "your password"". Wait for some time until module responds "Wi-Fi Connected". If you get this message then your module is connected to your access point. With this you should feel happy
+Type AT+CIPMUX=1, you will get “OK”
+Type”AT+CIPSERVER=1,80”

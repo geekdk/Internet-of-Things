@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>RGB LED Control</title>
+	</head>
+	<body>
+	
+	<!-- in the <button> tags below the ID attribute is the value sent to the arduino -->
+	
+
+	
+	<button id="10" class="led">Green</button> 
+	<button id="10" class="led">Blue</button> 
+	<button id="11" class="led">Red</button> 
+	
+	<script src="jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".led").click(function(){
+				var p = $(this).attr('id'); // get interger value 
+				// send HTTP GET request to the IP address with the parameter "pin" and value "p", then execute the function
+				$.get("http://10.0.0.17:80/", {pin:p}); // execute get request
+			});
+		});
+	</script>
+	</body>
+</html>
+ 
